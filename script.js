@@ -10,12 +10,14 @@ const getSum = () => {
 		sum += parseFloat(ele.textContent);
 	}
 	console.log(sum);
-	let tbl = document.getElementById("table");
-	let row = tbl.insertRow();
-	let col1 = row.insertCell();
-	col1.textContent("Total: ");
-	let col2 = row.insertCell();
-	col1.textContent("Total: ");
+	
+	let newRow = document.createElement("tr");
+	let newColCel = document.createElement("td");
+	newColCel.textContent = `${sum}`;
+
+	newRow.appendChild(newColCel);
+	const tblNode = document.querySelector("table");
+	tblNode.appendChild(newRow);
 };
 
 getSumBtn.addEventListener("click", getSum);
