@@ -13,6 +13,7 @@ const getSum = () => {
 	
 	let newRow = document.createElement("tr");
 	let newColCel = document.createElement("td");
+	newColCel.setAttribute("id", "ans");
 	newColCel.textContent = `${sum}`;
 
 	newRow.appendChild(newColCel);
